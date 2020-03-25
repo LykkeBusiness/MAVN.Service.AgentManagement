@@ -1,0 +1,72 @@
+AgentManagementService:
+  Db:
+    LogsConnectionString:
+      settings-key: AgentManagementService-LogsConnectionString
+      types:
+        - AzureTableStorage
+    DataConnectionString:
+      settings-key: AgentManagementService-DataConnectionString
+
+  TokenSymbol:
+    settings-key: Constant-TokenSymbol
+
+  NumberOfRequiredTokens:
+    settings-key: AgentManagementService-NumberOfRequiredTokens
+
+  DemoEmailSuffix:
+    settings-key: DemoModeEmailSuffix
+
+  Notifications:
+    PushNotifications:
+      AgentApprovedTemplateId:
+        settings-key: AgentManagementService-Notifications-PushNotifications-AgentApprovedTemplateId
+      AgentRejectedTemplateId:
+        settings-key: AgentManagementService-Notifications-PushNotifications-AgentRejectedTemplateId
+
+    EmailNotifications:
+      AgentRejected:
+        SubjectTemplateId:
+          settings-key: AgentManagementService-Notifications-EmailNotifications-AgentRejected-SubjectTemplateId
+        MessageTemplateId:
+          settings-key: AgentManagementService-Notifications-EmailNotifications-AgentRejected-MessageTemplateId
+
+  Rabbit:
+    Publishers:
+      PushNotificationsConnString:
+        settings-key: NotificationSystemRabbitMQ
+        types:
+          - RabbitMq
+
+      EmailNotificationsConnString:
+        settings-key: NotificationSystemRabbitMQ
+        types:
+          - RabbitMq
+
+CustomerProfileServiceClient:
+  ServiceUrl:
+    settings-key: CustomerProfileServiceUrl
+
+PrivateBlockchainFacadeServiceClient:
+  ServiceUrl:
+    settings-key: PrivateBlockchainFacadeServiceUrl
+
+DictionariesServiceClient:
+  ServiceUrl:
+    settings-key: DictionariesServiceUrl
+
+TokenPropertyIntegrationServiceClient:
+  ServiceUrl:
+    settings-key: TokenPropertyIntegrationServiceUrl
+
+SlackNotifications:
+  AzureQueue:
+    ConnectionString:
+      settings-key: SlackNotificationsConnString
+      types:
+        - AzureTableStorage
+    QueueName:
+      settings-key: SlackQueueName
+
+MonitoringServiceClient:
+  MonitoringServiceUrl:
+    settings-key: MonitoringServiceUrl
