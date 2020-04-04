@@ -22,7 +22,7 @@ namespace MAVN.Service.AgentManagement.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity", b =>
                 {
                     b.Property<Guid>("CustomerId")
                         .ValueGeneratedOnAdd()

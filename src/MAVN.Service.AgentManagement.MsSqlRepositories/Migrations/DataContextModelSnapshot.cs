@@ -20,7 +20,7 @@ namespace MAVN.Service.AgentManagement.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity", b =>
                 {
                     b.Property<Guid>("CustomerId")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace MAVN.Service.AgentManagement.MsSqlRepositories.Migrations
                     b.ToTable("agents");
                 });
 
-            modelBuilder.Entity("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.ImageEntity", b =>
+            modelBuilder.Entity("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.ImageEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,7 +65,7 @@ namespace MAVN.Service.AgentManagement.MsSqlRepositories.Migrations
                     b.ToTable("images");
                 });
 
-            modelBuilder.Entity("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.TokensRequirementEntity", b =>
+            modelBuilder.Entity("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.TokensRequirementEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -80,9 +80,9 @@ namespace MAVN.Service.AgentManagement.MsSqlRepositories.Migrations
                     b.ToTable("tokens_requirement");
                 });
 
-            modelBuilder.Entity("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.ImageEntity", b =>
+            modelBuilder.Entity("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.ImageEntity", b =>
                 {
-                    b.HasOne("Lykke.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity")
+                    b.HasOne("MAVN.Service.AgentManagement.MsSqlRepositories.Entities.AgentEntity")
                         .WithMany()
                         .HasForeignKey("CustomerId")
                         .HasConstraintName("fk_images_agents")
